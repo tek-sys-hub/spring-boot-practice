@@ -14,11 +14,18 @@ public class App
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 
         dev obj = (dev) context.getBean("dev");
+       // obj.setAge();
+
+        // we have only assign the value of dev not dev1 .dev1 stills has the value of age 0
+
+        System.out.println(obj.getAge());
 
         // with this we are directly calling the id we created
         // it returns obj type so we need to de the type cast it into dev type
 
-        //            dev obj = context.getBean(dev.class);
+       // dev obj = context.getBean(dev.class);
 //        obj.build();
+
+
     }
 }

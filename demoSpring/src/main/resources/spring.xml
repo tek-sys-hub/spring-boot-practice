@@ -10,10 +10,25 @@
 
     <bean id="dev" class="org.example.dev">
 
+        <!-- Here we are assigning the value of age from the xml file -->
+<!--            <property name="age" value="15"/>-->
+
+        <constructor-arg index="0" value="14"/>
+
+<!--        If We have Multiple arguments we can use index or name to inject the value in-->
+
+        <constructor-arg index="1" value="1400"/>
+
+
     </bean>
+
+    <!--
+
     <bean id="dev1" class="org.example.dev">
 
     </bean>
+
+-->
 
     <bean id="laptop" class="org.example.laptop">
 
