@@ -10,17 +10,31 @@
 
     <bean id="dev" class="org.example.dev">
 
+<!--        This is the constructor injector-->
+
+        <constructor-arg ref="laptop1"/>
+
+<!--        <property name="laptop" ref="laptop1"/>-->
+<!--        We can inject like this but how value
+            Laptop is not a premetive variable like int so how can we assign value
+            it's a reference of class
+            So we use the object of it
+-->
+    </bean>
+
+    <bean id="laptop1" class="org.example.laptop">
+
+    </bean>
+
         <!-- Here we are assigning the value of age from the xml file -->
 <!--            <property name="age" value="15"/>-->
 
-        <constructor-arg index="0" value="14"/>
+<!--        <constructor-arg index="0" value="14"/>-->
 
-<!--        If We have Multiple arguments we can use index or name to inject the value in-->
+<!--        If We have Multiple arguments we can use index or name to inject the value in -->
 
-        <constructor-arg index="1" value="1400"/>
+<!--        <constructor-arg index="1" value="1400"/>-->
 
-
-    </bean>
 
     <!--
 
@@ -30,8 +44,6 @@
 
 -->
 
-    <bean id="laptop" class="org.example.laptop">
 
-    </bean>
 
 </beans>
