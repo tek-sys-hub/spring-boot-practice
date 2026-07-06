@@ -6,4 +6,20 @@
 
     <!-- bean definitions here -->
 
+<!--    Now this will auto connect both of them based on the name which is com-->
+
+<bean id="dev" class="com.cherry.Dev" autowire="byName">
+
+<!--    <property name="com" ref="desk"/>-->
+
+</bean>
+
+    <bean id="com" class="com.cherry.Laptop" primary="true"/>
+
+<!--    We cant say here id = "com" cause that will create a confusion
+        If there is any confusion creating we can use primary = "true"
+        which will prorities the true one
+-->
+    <bean id="com1" class="com.cherry.Desktop"/>
+
 </beans>

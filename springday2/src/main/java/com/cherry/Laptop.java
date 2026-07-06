@@ -6,5 +6,7 @@ public class Laptop implements Computer {
     }
 
     @Override
-    public void compile () {}
+    public void compile () {
+        System.out.println("Laptop is compiling");
+    }
 }
