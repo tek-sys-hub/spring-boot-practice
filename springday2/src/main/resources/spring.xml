@@ -20,6 +20,6 @@
         If there is any confusion creating we can use primary = "true"
         which will prorities the true one
 -->
-    <bean id="com1" class="com.cherry.Desktop"/>
+    <bean id="com" class="com.cherry.Desktop"/>
 
 </beans>
