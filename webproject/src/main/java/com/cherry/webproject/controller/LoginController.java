@@ -1,4 +1,4 @@
-package com.cherry.webproject;
+package com.cherry.webproject.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

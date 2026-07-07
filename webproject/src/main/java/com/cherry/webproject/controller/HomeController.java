@@ -1,5 +1,4 @@
-package com.cherry.webproject;
-import org.springframework.stereotype.Controller;
+package com.cherry.webproject.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
