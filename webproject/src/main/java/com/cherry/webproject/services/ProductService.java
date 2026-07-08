@@ -2,11 +2,13 @@ package com.cherry.webproject.services;
 
 import com.cherry.webproject.models.Product;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.List;
 
 @Component
+@Service
 public class ProductService {
 
     public List<Product> products = Arrays.asList(
@@ -17,5 +19,11 @@ public class ProductService {
 
     public List<Product> getProducts () {
         return products;
+    }
+
+    public Product getProductById(int prosId) {
+        return products.stream().
+                filter(p -> p.getProsId() == prosId)
+                .findFirst().get();
     }
 }
