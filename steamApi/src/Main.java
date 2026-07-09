@@ -12,7 +12,17 @@ public class Main {
                 * condition*/
                 .toList();
 
+        List<Integer> doubleTheNum = num.stream()
+            .map(n -> n *2)// Using map we can transform the number
+            .toList();
+
+        int maxNum = num.stream()
+             .max(Integer::compareTo)// Show the largest number in the list
+             .get();
+
         System.out.println(even);
+        System.out.println(doubleTheNum);
+        System.out.println(maxNum);
 
     }
 }
