@@ -3,9 +3,7 @@ package com.cherry.webproject.controller;
 import com.cherry.webproject.models.Product;
 import com.cherry.webproject.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -15,13 +13,16 @@ public class ProductController {
     @Autowired
     ProductService service;
 
-    @RequestMapping("/products")
+    @GetMapping("/products")
     public List<Product> products () {
         return service.getProducts();
     }
 
-    @RequestMapping("/products/{prosId}")
+    @GetMapping("/products/{prosId}")
     public Product getProductById (@PathVariable int prosId) {
         return service.getProductById(prosId);
     }
+
+    @PostMapping("/products")
+    public void addProduct (@RequestBody Product prod) {service.addProduct(prod);}
 }

@@ -8,5 +8,5 @@ import lombok.Data;
 public class Product {
     private int prosId;
     private String proName;
-    private int proPrince;
+    private int proPrice;
 }
