@@ -31,5 +31,9 @@ public class ProductController {
         service.upprod(prod);
     }
 
+    @DeleteMapping("/products/{prodId}")
+    public void dltProd (@PathVariable int prodId) {
+        service.dltProd(prodId);
+    }
 
 }

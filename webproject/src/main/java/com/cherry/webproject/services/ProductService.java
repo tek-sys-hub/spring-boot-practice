@@ -41,4 +41,14 @@ public class ProductService {
         }
         products.set(index,prod);
     }
+
+    public void dltProd(int prodId) {
+        int index = 0;
+        for (int i = 0; i < products.size(); i++){
+            if (products.get(i).getProsId() == prodId) {
+                index = i;
+            }
+        }
+        products.remove(index);
+    }
 }
