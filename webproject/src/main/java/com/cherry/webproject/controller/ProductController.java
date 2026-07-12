@@ -30,7 +30,7 @@ public class ProductController {
     public void upProd (@RequestBody Product prod) {
         service.upprod(prod);
     }
-
+// For deleting data
     @DeleteMapping("/products/{prodId}")
     public void dltProd (@PathVariable int prodId) {
         service.dltProd(prodId);
